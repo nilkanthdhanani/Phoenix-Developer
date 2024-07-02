@@ -145,7 +145,7 @@ export default function Home() {
               <img src={heroIco5} alt="heroIco5" data-aos="fade-left" />
             </div>
             <div className="digital-div-icon3">
-              <img src={ring3} alt="ring3" data-aos="fade-left" />
+              <img src={ring3} alt="ring3" data-aos="rotate" />
             </div>
           </div>
         </div>
@@ -164,7 +164,7 @@ export default function Home() {
               </div>
               <div className="wwd-grid2">
                 <div className="wwd-grid2-box" data-aos="fade-left">
-                  <img src={ring2} alt="ring2" data-aos="fade-down-left" data-aos-duration="2000" />
+                  <img src={ring2} alt="ring2" data-aos="rotate" data-aos-duration="2000" />
                   <h2>What We Do</h2>
                   <p>Habitant morbi tristique senectus et. Nec dui nunc mattis enim ut tellus. Semper auctor neque vitae tempus quam pellentesque nec nam aliquam. </p>
                   <div className="more-button">
@@ -214,7 +214,7 @@ export default function Home() {
               <img src={formBg} alt="formBg" data-aos="zoom-in" />
             </div>
             <div className="form-div-abso">
-              <img src={ring2} alt="ring2" data-aos="fade-right" />
+              <img src={ring2} alt="ring2" data-aos="rotate" />
               <img src={heroIco4} alt="heroIco4" data-aos="fade-left" />
             </div>
             <div className="form-div-box">
@@ -239,7 +239,7 @@ export default function Home() {
               </div>
             </div>
             <div className="form-div-abso2">
-              <img src={ring1} alt="ring1" data-aos="fade-left" />
+              <img src={ring1} alt="ring1" data-aos="rotate" />
             </div>
             <div className="form-div-round">
               <img src={heroIco3} alt="heroIco3" data-aos="zoom-in" />
