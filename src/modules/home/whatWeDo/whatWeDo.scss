@@ -1,0 +1,160 @@
+@import "../../../styles/index.scss";
+
+
+.what-we-do {
+    background-color: var(--bgcolor3);
+    position: relative;
+    overflow: hidden;
+
+    .what-we-do-linear {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 195px;
+        background-image: linear-gradient(#d3b1f4, #fbc6d9);
+
+        @include breakpoint("md-max") {
+            padding: 250px 0;
+        }
+    }
+
+    .what-we-do-div {
+        position: relative;
+        padding: 200px 0 60px 0;
+
+        @include breakpoint("md-max") {
+            padding: 100px 0 60px 0;
+        }
+
+        @include breakpoint("sm-max") {
+            padding: 60px 0;
+        }
+
+        .wwd-grid {
+            display: grid;
+            grid-template-columns: 1fr 540px;
+
+            @include breakpoint("md-max") {
+                grid-template-columns: 1fr;
+            }
+
+            .wwd-grid1 {
+                position: relative;
+
+                @include breakpoint("md-max") {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row-reverse;
+                    margin-bottom: 50px;
+                }
+
+                @include breakpoint("sm-max") {
+                    display: block;
+                }
+
+                img {
+                    max-width: 280px;
+                    margin: 0 auto;
+                    padding-top: 40px;
+
+                    @include breakpoint("lg-max") {
+                        width: 100%;
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    @include breakpoint("sm-max") {
+                        max-width: 150px;
+                    }
+                }
+
+                .wwd-grid1-abso {
+                    position: absolute;
+                    bottom: 10%;
+                    left: 0;
+
+                    @include breakpoint("md-max") {
+                        position: static;
+                    }
+
+                    @include breakpoint("sm-max") {
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+
+                    img {
+                        max-width: 190px;
+
+                        @include breakpoint("lg-max") {
+                            width: 100%;
+                        }
+
+                        @include breakpoint("sm-max") {
+                            max-width: 145px;
+                        }
+                    }
+                }
+            }
+
+            .wwd-grid2 {
+                .wwd-grid2-box {
+                    width: 100%;
+                    margin-bottom: 60px;
+                    padding: 140px 30px 120px 30px;
+                    border-radius: 20px;
+                    background-color: var(--color-white);
+                    position: relative;
+
+                    @include breakpoint("sm-max") {
+                        padding: 140px 30px 30px 30px;
+                        margin-bottom: 40px;
+                    }
+
+                    h2 {
+                        @include font48;
+                        color: var(--font-color3);
+                        margin-top: 30px;
+
+                        @include breakpoint("sm-max") {
+                            @include font32;
+                        }
+                    }
+
+                    p {
+                        @include font20;
+                        color: var(--font-color);
+                        line-height: 1.8;
+                        margin: 20px 0 30px 0;
+
+                        @include breakpoint("sm-max") {
+                            @include font16;
+                            line-height: 1.8;
+                        }
+                    }
+
+                    img {
+                        position: absolute;
+                        top: -15%;
+                        max-width: 210px;
+
+                        @include breakpoint("sm-max") {
+                            max-width: 170px;
+                            top: -10%;
+                        }
+                    }
+                }
+
+                .wwd-grid2-img {
+                    img {
+                        max-width: 300px;
+
+                        @include breakpoint("sm-max") {
+                            max-width: 200px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

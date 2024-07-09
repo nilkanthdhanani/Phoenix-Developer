@@ -1,0 +1,58 @@
+@import "../../../styles/index.scss";
+
+
+.studio {
+    padding-top: 570px;
+    background-image: url("../../../assets/images/jpg/studio.jpg");
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: cover;
+    overflow: hidden;
+
+    @include breakpoint("sm-max") {
+        padding: 200px 0;
+    }
+
+    .studio-grid {
+        @include grid2c;
+        gap: 0;
+
+        @include breakpoint("md-max") {
+            display: block;
+        }
+
+        .studio-grid-box {
+            padding: 30px 30px 70px 30px;
+            background-color: var(--color-white);
+
+            @include breakpoint("sm-max") {
+                padding: 30px;
+            }
+
+            h2 {
+                @include font48;
+                color: var(--font-color3);
+
+                @include breakpoint("sm-max") {
+                    @include font32;
+                }
+            }
+
+            p {
+                @include font16;
+                color: var(--font-color);
+                line-height: 1.8;
+            }
+
+            .stdio-media-icon {
+                margin-top: 50px;
+                @include flex;
+                gap: 20px;
+
+                img {
+                    max-width: 28px;
+                }
+            }
+        }
+    }
+}

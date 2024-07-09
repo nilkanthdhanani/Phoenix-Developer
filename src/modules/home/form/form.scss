@@ -1,0 +1,219 @@
+@import "../../../styles/index.scss";
+
+.form {
+    padding: 100px 0;
+    overflow: hidden;
+
+    @include breakpoint("sm-max") {
+        padding: 60px 0;
+    }
+
+    .form-div {
+        position: relative;
+        padding-top: 60px;
+
+        @include breakpoint("sm-max") {
+            padding: 0;
+        }
+
+        .form-div-img {
+            @include breakpoint("sm-max") {
+                display: none;
+            }
+
+            img {
+                margin: 0 112px 0 auto;
+                max-width: 850px;
+
+                @include breakpoint("md-max") {
+                    margin: 0;
+                    width: 100%;
+                }
+            }
+        }
+
+        .form-div-abso {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            @include flex-between;
+
+            @include breakpoint("sm-max") {
+                position: initial;
+                display: block;
+            }
+
+            img {
+                max-width: 310px;
+                margin: 0;
+
+                &:nth-child(2) {
+                    max-width: 250px;
+                }
+
+                @include breakpoint("md-max") {
+                    max-width: 250px;
+
+                    &:nth-child(2) {
+                        width: 100%;
+                    }
+                }
+
+                @include breakpoint("sm-max") {
+                    max-width: 170px;
+
+                    &:nth-child(2) {
+                        max-width: 170px;
+                        margin-left: auto;
+                    }
+                }
+            }
+        }
+
+        .form-div-abso2 {
+            position: absolute;
+            bottom: 25%;
+            right: 12%;
+
+            @include breakpoint("lg-max") {
+                z-index: -1;
+            }
+
+            @include breakpoint("sm-max") {
+                position: initial;
+                margin-top: -20px;
+            }
+
+            img {
+                max-width: 185px;
+                margin: 0;
+
+                @include breakpoint("sm-max") {
+                    max-width: 150px;
+                }
+            }
+        }
+
+        .form-div-round {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin-top: -170px;
+            padding-left: 150px;
+
+            @include breakpoint("sm-max") {
+                margin: 0;
+                padding: 0;
+                justify-content: flex-end;
+            }
+
+            img {
+                max-width: 340px;
+                margin: 0;
+
+                @include breakpoint("sm-max") {
+                    max-width: 170px;
+                }
+            }
+        }
+
+        .form-div-box {
+            position: absolute;
+            top: 29%;
+            left: 8%;
+            min-width: 600px;
+            padding: 30px;
+            border-radius: 20px;
+            background-color: var(--color-white);
+            z-index: 1;
+
+            @include breakpoint("md-max") {
+                min-width: 100%;
+                width: 100%;
+                top: 20%;
+                left: 0;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            }
+
+            @include breakpoint("sm-max") {
+                padding: 40px 20px;
+                position: initial;
+                margin-top: -30px;
+            }
+
+            .form-div-box-input {
+                padding-left: 15px;
+                margin-bottom: 15px;
+
+                @include breakpoint("sm-max") {
+                    padding: 0;
+                }
+
+                label {
+                    display: block;
+                    @include font16;
+                    color: var(--font-color);
+                    margin-bottom: 4px;
+                }
+
+                input {
+                    width: 100%;
+                    padding: 15px 12px;
+                    background-color: var(--bgcolor-input);
+                    border: 2px solid var(--border-input);
+                    border-radius: 20px;
+                    @include font16;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                textarea {
+                    width: 100%;
+                    min-height: 130px;
+                    padding: 15px 12px;
+                    background-color: var(--bgcolor-input);
+                    border: 2px solid var(--border-input);
+                    border-radius: 20px;
+                    @include font16;
+                    resize: vertical;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                ::placeholder {
+                    color: var(--font-color4);
+                }
+            }
+
+            .form-div-box-check {
+                padding-left: 15px;
+                margin-bottom: 15px;
+
+                label {
+                    @include font16;
+                    color: var(--font-color);
+                    margin-left: 4px;
+
+                    a {
+                        color: var(--font-color3);
+                    }
+                }
+            }
+        }
+    }
+
+    .form-last-icon {
+        img {
+            max-width: 270px;
+
+            @include breakpoint("sm-max") {
+                max-width: 200px;
+            }
+        }
+    }
+}

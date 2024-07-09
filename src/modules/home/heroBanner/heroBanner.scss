@@ -1,0 +1,152 @@
+@import "../../../styles/index.scss";
+
+
+.hero-banner {
+    padding-top: 100px;
+    background-image: url("../../../assets/images/jpg/heroBg.jpg");
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: cover;
+    overflow: hidden;
+
+    .hero-banner-div {
+        padding: 60px 0 100px 0;
+
+        @include breakpoint("sm-max") {
+            padding: 60px 0;
+        }
+
+        .hbd-grid {
+            display: flex;
+            gap: 0;
+
+            @include breakpoint("lg-max") {
+                display: block;
+            }
+
+            .hbd-grid1 {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 240px;
+
+                @include breakpoint("lg-max") {
+                    flex-direction: row;
+                    gap: 0;
+                }
+
+                .hbd-grid1-img1 {
+                    display: flex;
+                    justify-content: flex-end;
+
+                    img {
+                        max-width: 130px;
+
+                        @include breakpoint("sm-max") {
+                            max-height: 200px;
+                        }
+                    }
+                }
+
+                .hbd-grid1-img2 {
+                    img {
+                        max-width: 200px;
+
+                        @include breakpoint("sm-max") {
+                            max-width: 150px;
+                        }
+                    }
+                }
+            }
+
+            .hbd-grid2 {
+                @include flex-center;
+
+                .hbd-grid2-text {
+                    h1 {
+                        text-shadow: 2px 2px 13px rgba(112, 43, 177, 0.45);
+                        @include font96;
+                        color: var(--color-white);
+                        text-align: center;
+                        margin-bottom: 30px;
+
+                        @include breakpoint("sm-max") {
+                            @include font48;
+                            font-weight: 800;
+                        }
+                    }
+
+                    .hbd-grid2-text-list {
+                        max-width: 620px;
+                        margin: 0 auto;
+                        padding: 25px 10px;
+                        border-radius: 50px;
+                        @include flex-center;
+                        background-image: linear-gradient(#b47aec, #702bb1);
+                        box-shadow: 5px 5px 20px 0 rgba(168, 119, 80, 0.4);
+
+                        @include breakpoint("sm-max") {
+                            padding: 15px 10px;
+                        }
+
+                        p {
+                            @include font20;
+                            color: var(--color-white);
+
+                            a {
+                                color: var(--color-white);
+                                margin: 0 5px;
+
+                                &:hover {
+                                    color: var(--font-color2);
+                                }
+                            }
+
+                            @include breakpoint("sm-max") {
+                                display: flex;
+                                flex-wrap: wrap;
+                                justify-content: center;
+                                gap: 10px 0;
+                                @include font16;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .hbd-grid3 {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                @include breakpoint("lg-max") {
+                    flex-direction: row;
+                    margin-top: 50px;
+                }
+
+                .hbd-grid1-img1 {
+                    display: flex;
+                    justify-content: flex-end;
+
+                    img {
+                        max-width: 160px;
+                        width: 100%;
+                    }
+                }
+
+                .hbd-grid1-img2 {
+                    margin-right: 55px;
+
+                    img {
+                        max-width: 145px;
+                        width: 100%;
+                    }
+
+                    @include breakpoint("sm-max") {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
