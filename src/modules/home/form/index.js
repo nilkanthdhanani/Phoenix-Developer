@@ -1,9 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './form.scss';
 import formBg from '../../../assets/images/svg/formBg.svg';
 import { heroIco3, heroIco4, heroIco5, ring2, ring1 } from '../../../assets/images/png';
 
 export default function Form() {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(formData);
+        setFormData({
+            name: '',
+            email: '',
+            message: ''
+        });
+    };
+
     return (
         <div>
             <section className="form">
@@ -17,25 +41,27 @@ export default function Form() {
                             <img src={heroIco4} alt="heroIco4" data-aos="fade-left" />
                         </div>
                         <div className="form-div-box">
-                            <div className="form-div-box-input">
-                                <label>Name</label>
-                                <input type="text" placeholder='Enter your Name' />
-                            </div>
-                            <div className="form-div-box-input">
-                                <label>Email</label>
-                                <input type="text" placeholder='Enter a valid email eddress' />
-                            </div>
-                            <div className="form-div-box-input">
-                                <label>Message</label>
-                                <textarea placeholder='Enter your message'></textarea>
-                            </div>
-                            <div className="form-div-box-check">
-                                <input type="checkbox" />
-                                <label>I accept the <a href="terms">Terms of Service</a></label>
-                            </div>
-                            <div className="submit-button">
-                                <button>SUBMIT</button>
-                            </div>
+                            <form onSubmit={handleSubmit}>
+                                <div className="form-div-box-input">
+                                    <label>Name</label>
+                                    <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Enter your Name" required />
+                                </div>
+                                <div className="form-div-box-input">
+                                    <label>Email</label>
+                                    <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Enter a valid email address" required />
+                                </div>
+                                <div className="form-div-box-input">
+                                    <label>Message</label>
+                                    <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Enter your message" required></textarea>
+                                </div>
+                                <div className="form-div-box-check">
+                                    <input type="checkbox" name="name" value={formData.name} required />
+                                    <label>I accept the <a href="terms">Terms of Service</a></label>
+                                </div>
+                                <div className="submit-button">
+                                    <button>SUBMIT</button>
+                                </div>
+                            </form>
                         </div>
                         <div className="form-div-abso2">
                             <img src={ring1} alt="ring1" data-aos="fade-left" />
