@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './digital.scss';
 import { heroIco3, heroIco4, heroIco6, heroIco5, ring3 } from '../../../assets/images/png';
+import Aos from 'aos';
 
 export default function Digital() {
+    useEffect(() => {
+        Aos.init({
+          duration: 1000,
+          once: false,
+        });
+        Aos.refresh();
+    }, []);
+
     return (
         <div>
             <section className="digital">

@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './lady.scss';
 import { lady, ladyBg } from '../../../assets/images/png';
+import Aos from 'aos';
 
 export default function Lady() {
+    useEffect(() => {
+        Aos.init({
+          duration: 1000,
+          once: false,
+        });
+        Aos.refresh();
+    }, []);
     return (
         <div>
             <section className="lady">

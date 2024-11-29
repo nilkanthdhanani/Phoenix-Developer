@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './heroBanner.scss';
 import { heroIco1, heroIco2, heroIco3, heroIco4 } from '../../../assets/images/png';
+import Aos from 'aos';
 
 export default function HeroBanner() {
+    useEffect(() => {
+        Aos.init({
+          duration: 1000,
+          once: false,
+        });
+        Aos.refresh();
+    }, []);
+
     return (
         <div>
             <section className="hero-banner">

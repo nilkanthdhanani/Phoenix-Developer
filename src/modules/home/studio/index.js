@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './studio.scss';
 import { instagram, facebook, twitter, google } from '../../../assets/images/png';
+import Aos from 'aos';
 
 export default function Studio() {
+    useEffect(() => {
+        Aos.init({
+          duration: 1000,
+          once: false,
+        });
+        Aos.refresh();
+    }, []);
+
     return (
         <div>
             <section className="studio">

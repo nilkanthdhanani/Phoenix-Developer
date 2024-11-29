@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './whatWeDo.scss';
 import { heroIco3, heroIco6, heroIco5, ring2 } from '../../../assets/images/png';
+import Aos from 'aos';
 
 export default function WhatWeDo() {
+    useEffect(() => {
+        Aos.init({
+          duration: 1000,
+          once: false,
+        });
+        Aos.refresh();
+    }, []);
+
     return (
         <div>
             <section className="what-we-do">

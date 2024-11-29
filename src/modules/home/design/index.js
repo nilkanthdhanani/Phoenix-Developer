@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './design.scss';
 import { design1, design2, design3, design4 } from '../../../assets/images/png';
+import Aos from 'aos';
 
 export default function Design() {
+    useEffect(() => {
+        Aos.init({
+          duration: 1000,
+          once: false,
+        });
+        Aos.refresh();
+    }, []);
+
     return (
         <div>
             <section className="design">

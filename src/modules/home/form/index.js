@@ -1,9 +1,18 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './form.scss';
 import formBg from '../../../assets/images/svg/formBg.svg';
 import { heroIco3, heroIco4, heroIco5, ring2, ring1 } from '../../../assets/images/png';
+import Aos from 'aos';
 
 export default function Form() {
+    useEffect(() => {
+        Aos.init({
+          duration: 1000,
+          once: false,
+        });
+        Aos.refresh();
+    }, []);
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
